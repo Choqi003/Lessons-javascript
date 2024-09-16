@@ -8,7 +8,9 @@ while "Exercises" are all exercises that were set to do after every lesson in th
 
 Started 12/9/2024
 
--What i learned so far:
+What i learned so far:
 
 - Strings
 - Variables
+- Booleans
+- If-Statements
