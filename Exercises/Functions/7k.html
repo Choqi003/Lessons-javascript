@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Cart Quantity</title>
+    <style>
+      p {
+        font-family: Arial;
+        font-size: 25px;
+        font-weight: bold;
+        text-decoration: underline;
+      }
+
+      button {
+        background-color: yellow;
+        color: black;
+        border: none;
+        padding: 10px 16px;
+        transition: background-color 0.15s;
+      }
+
+      button:active {
+        background-color: rgb(179, 179, 0);
+      }
+    </style>
+  </head>
+  <body>
+    <p>Cart Quantity</p>
+    <button
+      onclick="
+    updateCartQuantity();
+    "
+    >
+      Show quantity
+    </button>
+
+    <button
+      onclick="
+    updateCartQuantity(cartQuantity++);
+    "
+    >
+      Add to Cart
+    </button>
+
+    <button
+      onclick="
+    updateCartQuantity(cartQuantity += 2);
+    "
+    >
+      +2
+    </button>
+
+    <button
+      onclick="
+    updateCartQuantity(cartQuantity += 3);
+    "
+    >
+      +3
+    </button>
+
+    <button
+      onclick="
+  if (cartQuantity < 1) {
+    console.log ('Not enough items in the cart.')
+  } else {
+    updateCartQuantity(cartQuantity -= 3);
+  } 
+  "
+    >
+      -3
+    </button>
+
+    <button
+      onclick="
+    updateCartQuantity(cartQuantity = 0);
+    "
+    >
+      Reset Cart
+    </button>
+    <script>
+      let cartQuantity = 0;
+      function updateCartQuantity(value) {
+        value;
+        console.log(`Cart quantity: ${cartQuantity}`);
+      }
+    </script>
+  </body>
+</html>
