@@ -14,3 +14,5 @@ What i learned so far:
 - Variables
 - Booleans
 - If-Statements
+- Functions
+- Objects
