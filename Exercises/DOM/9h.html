@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>9h</title>
+  </head>
+  <body style="font-family: Arial, Helvetica, sans-serif">
+    <input
+      onkeyup="
+    onKeyupEvent(event);
+    "
+      class="input-text"
+      placeholder="Type something"
+    />
+    <p class="updating-text"></p>
+    <script>
+      function onKeyupEvent(event) {
+        if (event.key) {
+          textInput();
+        }
+      }
+
+      function textInput() {
+        const inputText = document.querySelector(".input-text");
+        let text = String(inputText.value);
+
+        document.querySelector(".updating-text").innerHTML = `${text}`;
+      }
+    </script>
+  </body>
+</html>
