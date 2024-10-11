@@ -16,3 +16,4 @@ What i learned so far:
 - If-Statements
 - Functions
 - Objects
+- Object oriented programming (DOM)
