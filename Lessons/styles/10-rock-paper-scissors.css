@@ -1,0 +1,39 @@
+body {
+  background-color: rgb(25, 25, 25);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.rock-button,
+.paper-button,
+.scissors-button {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  object-position: center;
+  background-color: rgb(25, 25, 25);
+  border-color: white;
+  border-radius: 120px;
+  margin-right: 10px;
+  cursor: pointer;
+  border-style: solid;
+}
+
+.header {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.rock-button-pic,
+.paper-button-pic,
+.scissors-button-pic {
+  width: 60px;
+}
+
+.reset-score {
+  padding: 8px 15px;
+}
+
+.result {
+  font-size: 25px;
+  font-weight: 700;
+}
