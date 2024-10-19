@@ -9,7 +9,7 @@
         justify-content: center;
         align-items: center;
         background-color: black;
-        width: 150px;
+        width: 200px;
         height: 230px;
         cursor: inherit;
       }
@@ -23,7 +23,17 @@
 
       .symbols {
         display: flex;
-        column-gap: 4px;
+        flex-direction: column;
+        column-gap: 5px;
+        row-gap: 4px;
+      }
+      .numbersection {
+        display: inline-block;
+      }
+
+      .symbol-section {
+        display: inline-block;
+        padding-top: 2px;
       }
 
       button {
@@ -44,37 +54,62 @@
 
       .results {
         color: white;
+        padding-left: 60px;
+      }
+
+      .text-box {
+        display: flexbox;
+        justify-content: flex-start;
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <p class="results"></p>
-      <div class="numbers">
-        <div>
-        <button onclick="calculation += '1';console.log(calculation)">1</button>
-        <button onclick="calculation += '2';console.log(calculation)">2</button>
-        <button onclick="calculation += '3';console.log(calculation)">3</button>
+      <div class="text-box">
+        <p class="results"></p>
       </div>
       <div>
-        <button onclick="calculation += '4';console.log(calculation)">4</button>
-        <button onclick="calculation += '5';console.log(calculation)">5</button>
-        <button onclick="calculation += '6';console.log(calculation)">6</button>
-      </div>
-      <div>
-        <button onclick="calculation += '7';console.log(calculation)">7</button>
-        <button onclick="calculation += '8';console.log(calculation)">8</button>
-        <button onclick="calculation += '9';console.log(calculation)">9</button>
-      </div>
-      <div class="symbols">
-        <button onclick="calculation += ' + ';console.log(calculation)">+</button>
-        <button style="width: 27.79px;" onclick="calculation += ' - ';console.log(calculation)">-</button>
-        <button onclick="calculation = eval(calculation);console.log(calculation)">=</button>
+        <div class="numbersection">
+          <div class="numbers">
+            <div>
+              <button onclick="calculation += '1'; updateTextbox();">1</button>
+              <button onclick="calculation += '2';updateTextbox();">2</button>
+              <button onclick="calculation += '3';updateTextbox();">3</button>
+            </div>
+            <div>
+              <button onclick="calculation += '4';updateTextbox();">4</button>
+              <button onclick="calculation += '5';updateTextbox();">5</button>
+              <button onclick="calculation += '6';updateTextbox();">6</button>
+            </div>
+            <div>
+              <button onclick="calculation += '7';updateTextbox();">7</button>
+              <button onclick="calculation += '8';updateTextbox();">8</button>
+              <button onclick="calculation += '9';updateTextbox();">9</button>
+            </div>
+          </div>
+        </div>
+        <div class="symbol-section">
+          <div class="symbols">
+            <button onclick="calculation += ' + ';updateTextbox();">+</button>
+            <button
+              style="width: 27.79px"
+              onclick="calculation += ' - ';updateTextbox();"
+            >
+              -
+            </button>
+            <button onclick="calculation = eval(calculation);updateTextbox();">
+              =
+            </button>
+            <button onclick="calculation = 0; updateTextbox(); ">C</button>
+          </div>
+        </div>
       </div>
     </div>
     <script>
       let calculation = "";
-      document.querySelector("results").innerHTML = `${calculation}`;
+      function updateTextbox() {
+        document.querySelector(".results").innerHTML = `${calculation}`;
+      }
     </script>
   </body>
 </html>
