@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>6E</title>
+  </head>
+  <body>
+    <p class="text-on-screen"></p>
+    <script>
+      let age = "4";
+      const isHoliday = false;
+      if ((age <= 6 || age >= 65) && !isHoliday) {
+        document.querySelector(".text-on-screen").innerHTML =
+          "You are qualified for a discount! :)";
+      } else {
+        document.querySelector(".text-on-screen").innerHTML =
+          "You are not qualified for a discount! :(";
+      }
+    </script>
+  </body>
+</html>
